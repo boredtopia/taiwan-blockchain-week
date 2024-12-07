@@ -3,7 +3,6 @@ pragma solidity ^0.8.26;
 
 import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract BoredtopiaTBW is ERC721A, Ownable {
 
@@ -16,7 +15,7 @@ contract BoredtopiaTBW is ERC721A, Ownable {
     uint256 public START_ID = 1;
 
     bool public mintEnabled = false;
-    string public baseURI = "https://boredtopia.github.io/taiwan-blockchain-week/json/";
+    string public baseURI = "https://boredtopia.github.io/taiwan-blockchain-week/data.json";
 
     // start token id
     function _startTokenId() internal view virtual override returns (uint256) {
@@ -24,11 +23,12 @@ contract BoredtopiaTBW is ERC721A, Ownable {
     }
 
     // metadata
+    // metadata
     function setBaseURI(string calldata _newBaseURI) external onlyOwner {
         baseURI = _newBaseURI;
     }
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-        return string.concat(baseURI, Strings.toString(tokenId), ".json");
+        return baseURI;
     }
 
     // toggle sale
