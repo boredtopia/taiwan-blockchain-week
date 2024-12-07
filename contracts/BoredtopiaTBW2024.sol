@@ -4,11 +4,11 @@ pragma solidity ^0.8.26;
 import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract BoredtopiaTBW is ERC721A, Ownable {
+contract BoredtopiaTBW2024 is ERC721A, Ownable {
 
     // config
     constructor(address initialOwner)
-        ERC721A("Boredtopia Taiwan Blockchain Week", "BOREDTOPIATBW")
+        ERC721A("Boredtopia TBW2024", "BTBW24")
         Ownable(initialOwner) {
     }
     uint256 public MAX_MINT_PER_WALLET = 3;
