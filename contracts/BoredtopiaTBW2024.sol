@@ -15,7 +15,7 @@ contract BoredtopiaTBW2024 is ERC721A, Ownable {
     uint256 public START_ID = 1;
 
     bool public mintEnabled = false;
-    string public baseURI = "https://boredtopia.github.io/taiwan-blockchain-week/data.json";
+    string public baseURI = "https://boredtopia.github.io/tbw2024/data.json";
 
     // start token id
     function _startTokenId() internal view virtual override returns (uint256) {
